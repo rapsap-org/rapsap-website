@@ -32,10 +32,12 @@ window.matchMedia("(min-width: 1121px)").addEventListener("change", (event) => {
 });
 
 // ---- current page ---------------------------------------------------------
-const path = location.pathname.replace(/\/index\.html$/, "/");
+// Compare without trailing slashes so /about and /about/ both match.
+const norm = (pathname) => pathname.replace(/\/index\.html$/, "/").replace(/(.)\/+$/, "$1");
+const path = norm(location.pathname);
 document.querySelectorAll(".desktop-nav a, .mobile-menu nav a, .footer-nav a, .legal-nav a").forEach((link) => {
   const url = new URL(link.href, location.href);
-  if (url.origin === location.origin && !url.hash && url.pathname === path && path !== "/") {
+  if (url.origin === location.origin && !url.hash && norm(url.pathname) === path && path !== "/") {
     link.setAttribute("aria-current", "page");
   }
 });
