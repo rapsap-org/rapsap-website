@@ -1,298 +1,975 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>rapsap. — good food. great value. everyday.</title>
+    <meta
+      name="description"
+      content="good food. great value. everyday. rapsap is your neighbourhood supermarket — shop in store or continue on the rapsap app."
+    />
+    <meta name="author" content="Rapsap" />
+    <meta name="theme-color" content="#fcfcfc" />
+    <link rel="canonical" href="https://www.rapsap.com/" />
 
-		<meta name="author" content="Rapsap" />
-<link rel="stylesheet" href="./src/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
-
-		<title>Rapsap — Premium Supermarket. Everyday Smart Prices.</title>
-    <meta name="description" content="A premium supermarket for modern neighbourhoods across Mumbai, Thane and Kalyan. Bright aisles, fresh counters and a café — priced for the weekly shop, or delivered quickly from the same shelves." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
-    <meta property="og:site_name" content="Rapsap" />
+    <meta property="og:site_name" content="rapsap" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:url" content="https://www.rapsap.com/" />
-    <meta property="og:title" content="Rapsap — Premium Supermarket. Everyday Smart Prices." />
-    <meta property="og:description" content="A premium supermarket for modern neighbourhoods across Mumbai, Thane and Kalyan. Bright aisles, fresh counters and a café — priced for the weekly shop, or delivered quickly from the same shelves." />
-    <meta property="og:image" content="https://www.rapsap.com/og-banner.jpg" />
-    <meta property="og:image:secure_url" content="https://www.rapsap.com/og-banner.jpg" />
+    <meta property="og:title" content="rapsap. — good food. great value. everyday." />
+    <meta
+      property="og:description"
+      content="Your neighbourhood supermarket. Fresh food, weekly groceries and everyday essentials — in store, and on the rapsap app."
+    />
+    <meta property="og:image" content="https://www.rapsap.com/og-home.jpg" />
+    <meta property="og:image:secure_url" content="https://www.rapsap.com/og-home.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Inside a Rapsap supermarket — premium supermarket, everyday smart prices." />
+    <meta property="og:image:alt" content="rapsap. good food. great value. everyday." />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rapsap — Premium Supermarket. Everyday Smart Prices." />
-    <meta name="twitter:description" content="A premium supermarket for modern neighbourhoods across Mumbai, Thane and Kalyan. Bright aisles, fresh counters and a café — priced for the weekly shop, or delivered quickly from the same shelves." />
-    <meta name="twitter:image" content="https://www.rapsap.com/og-banner.jpg" />
-    <meta name="twitter:image:alt" content="Inside a Rapsap supermarket — premium supermarket, everyday smart prices." />
-		<style>
-			body {
-				background: white;
-			}
-		</style>
-		<!-- Lottie Player -->
-		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	</head>
-	<body>
-		<div id="app">
-			<nav class="navbar">
-				<a href="/">
-					<img
-						src="/image-assets/rapsap-logo.svg"
-						class="logo-nav"
-						alt="Rapsap Logo"
-					/>
-				</a>
+    <meta name="twitter:title" content="rapsap. — good food. great value. everyday." />
+    <meta
+      name="twitter:description"
+      content="Your neighbourhood supermarket. Fresh food, weekly groceries and everyday essentials — in store, and on the rapsap app."
+    />
+    <meta name="twitter:image" content="https://www.rapsap.com/og-home.jpg" />
+    <meta name="twitter:image:alt" content="rapsap. good food. great value. everyday." />
 
-				<img class="hamburger" id="hamburger-btn" src="/hamburgerMenu.svg" />
+    <!-- Fonts: Gilroy (display) + DM Sans (body), self-hosted -->
+    <link rel="preload" href="/fonts/Gilroy-ExtraBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/DMSans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/site.css" />
+    <link rel="stylesheet" href="/src/home.css" />
 
-				<div class="nav-items" id="nav-menu">
-					<ul>
-						<li><a href="/about.html" id="about-link">About</a></li>
-						<li>
-							<a href="/franchise.html" id="franchise-link">Franchise</a>
-						</li>
-						<li><a href="/stores.html" id="store-link">Stores</a></li>
-					</ul>
-				</div>
-			</nav>
-
-			<main class="hero-section">
-				<div class="hero-content">
-					<div class="hero-badge">
-						<span>📍 Now live in Thane West</span>
-					</div>
-
-					<h1 class="hero-title">
-						Essentials delivered,<br />
-						<span class="hero-brand">rapsap</span>
-					</h1>
-
-					<p class="hero-description">
-						Experience the store or get it at your door. Simple. Smooth
-						ordering, fast delivery.
-					</p>
-
-					<div class="hero-buttons">
-						<a
-							href="https://wa.me/917738231532?text=Hi%20Rapsap,%20I%20would%20like%20to%20place%20an%20order"
-							class="btn-whatsapp"
-							target="_blank"
-						>
-							Order on WhatsApp
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M12 2C6.48 2 2 6.48 2 12C2 14.05 2.64 15.95 3.71 17.52L2 22L6.66 20.34C8.15 21.28 9.93 21.82 11.84 21.82H12C17.52 21.82 22 17.34 22 11.82C22 9.17 20.95 6.66 19.12 4.83C17.29 3 14.78 2 12 2ZM17.61 15.85C17.36 16.62 16.35 17.25 15.55 17.44C15.01 17.56 14.3 17.65 12 16.59C9.06 15.19 7.35 12.13 7.21 11.94C7.07 11.76 6 10.31 6 8.82C6 7.33 6.77 6.6 7.05 6.31C7.33 6.02 7.65 5.94 7.84 5.94C8.03 5.94 8.21 5.94 8.37 5.95C8.54 5.96 8.77 5.89 8.99 6.44C9.24 7.03 9.84 8.52 9.91 8.66C9.98 8.8 10.03 8.96 9.94 9.14C9.85 9.32 9.8 9.42 9.66 9.58C9.52 9.74 9.39 9.87 9.25 10.04C9.11 10.18 8.96 10.34 9.12 10.63C9.28 10.91 9.84 11.82 10.66 12.56C11.72 13.51 12.62 13.78 12.91 13.92C13.2 14.06 13.38 14.04 13.54 13.86C13.7 13.68 14.27 13 14.46 12.71C14.65 12.42 14.84 12.47 15.09 12.56C15.34 12.65 16.83 13.39 17.12 13.53C17.41 13.67 17.59 13.74 17.66 13.88C17.73 14.02 17.73 14.59 17.48 15.36L17.61 15.85Z"
-									fill="white"
-								/>
-							</svg>
-						</a>
-						<a
-							href="https://play.google.com/store/apps/details?id=com.rapsap.customerapp"
-							class="btn-app"
-							target="_blank"
-						>
-							Get the App
-							<img
-								src="/image-assets/googleplay-icon-white.png"
-								alt="Google Play"
-								class="app-icon"
-							/>
-							<img
-								src="/image-assets/appstore-icon-white.png"
-								alt="App Store"
-								class="app-icon"
-							/>
-						</a>
-					</div>
-				</div>
-
-				<div class="hero-image">
-					<div class="hero-image-container">
-						<div class="hero-mockup-image">
-							<lottie-player
-								src="/image-assets/hero-animation-final.json"
-								background="transparent"
-								speed="1"
-								style="width: 100%; height: 100%"
-								loop
-								autoplay
-							>
-							</lottie-player>
-						</div>
-					</div>
-				</div>
-			</main>
-		</div>
-
-		<!-- Rive canvas hidden for new design -->
-		<!-- <canvas id="rive-canvas" width="900" height="900"></canvas> -->
-
-		<footer class="footer">
-			<div class="footer-container">
-				<div class="footer-brand">
-					<img
-						src="/image-assets/rapsap-logo.svg"
-						alt="Rapsap"
-						class="footer-logo"
-					/>
-					<p>
-						Your hybrid superstore for groceries, dairy, fruits & medicines.
-						Shop in-store or get essentials delivered in 10 minutes.
-					</p>
-					<div class="footer-contact">
-						<p><a href="mailto:care@rapsap.com">care@rapsap.com</a></p>
-						<div class="footer-social">
-							<a
-								href="https://bit.ly/481ErZr"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Instagram"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"
-									/>
-								</svg>
-							</a>
-							<a
-								href="https://bit.ly/4mKqZO6"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="X (Twitter)"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-									/>
-								</svg>
-							</a>
-							<a
-								href="https://bit.ly/46mMEpO"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Facebook"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-									/>
-								</svg>
-							</a>
-							<a
-								href="https://bit.ly/3K2PO9w"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="LinkedIn"
-							>
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-								>
-									<path
-										d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-									/>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="footer-section">
-					<h4>Quick Links</h4>
-					<ul class="footer-links">
-						<li><a href="/about.html">About Us</a></li>
-						<li><a href="/franchise.html">Franchise</a></li>
-						<li><a href="/stores.html">Our Stores</a></li>
-					</ul>
-				</div>
-
-				<div class="footer-section">
-					<h4>Legal</h4>
-					<ul class="footer-links">
-						<li><a href="/privacy-policy.html">Privacy Policy</a></li>
-						<li><a href="/terms-conditions.html">Terms & Conditions</a></li>
-						<li><a href="/shipping-policy.html">Shipping & Delivery</a></li>
-						<li><a href="/refund-policy.html">Refund & Cancellation</a></li>
-						<li><a href="/contact-us-policy.html">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="footer-bottom">
-				<p>&copy; 2025 Rapsap Essential Retail Pvt Ltd. All rights reserved.</p>
-				<p>Made with passion for your daily essentials</p>
-			</div>
-		</footer>
-
-		<script>
-			const currentPage = window.location.pathname;
-
-			const aboutLink = document.getElementById("about-link");
-			const franchiseLink = document.getElementById("franchise-link");
-			const storeLink = document.getElementById("store-link");
-
-			const hamburgerBtn = document.getElementById("hamburger-btn");
-			const navMenu = document.getElementById("nav-menu");
-
-			if (franchiseLink && currentPage === "/franchise.html") {
-				franchiseLink.classList.add("active");
-			}
-			if (aboutLink && currentPage === "/about.html") {
-				aboutLink.classList.add("active");
-			}
-
-			if (storeLink && currentPage === "/stores.html") {
-				storeLink.classList.add("active");
-			}
-
-			if (hamburgerBtn) {
-				hamburgerBtn.addEventListener("click", function () {
-					if (navMenu) navMenu.classList.toggle("show");
-				});
-			}
-		</script>
-	</body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "rapsap",
+        "legalName": "Rapsap Essential Retail Pvt Ltd",
+        "url": "https://www.rapsap.com/",
+        "logo": "https://www.rapsap.com/image-assets/rapsap-new-logo.png",
+        "email": "care@rapsap.com",
+        "telephone": "+91 77382 31532",
+        "sameAs": [
+          "https://bit.ly/481ErZr",
+          "https://bit.ly/4mKqZO6",
+          "https://bit.ly/46mMEpO",
+          "https://bit.ly/3K2PO9w"
+        ]
+      }
+    </script>
+  </head>
+  <body class="antialiased">
+    <a class="skip-link" href="#main">skip to content</a>
+    <!-- @include partials/header.html -->
+    <main id="main" tabindex="-1">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> your neighbourhood supermarket</p>
+          <h1 id="hero-title">
+            <span>good food.</span><span class="hero-title-blue">great value.</span><span>everyday.</span>
+          </h1>
+          <p class="hero-intro">
+            Food your family reaches for. Value that makes sense every day. A real supermarket nearby, with the same
+            rapsap experience on your phone.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--ink button--app" href="#app" aria-label="get the rapsap app for iPhone or Android"
+              ><span class="store-marks" aria-hidden="true"
+                ><svg viewBox="0 0 24 24" role="img">
+                  <path
+                    fill="currentColor"
+                    d="M16.9 12.8c0-2.7 2.2-4 2.3-4.1a5 5 0 0 0-3.9-2.1c-1.7-.2-3.3 1-4.1 1-.9 0-2.2-1-3.6-1C5.7 6.7 3.9 7.8 3 9.5c-2 3.4-.5 8.5 1.4 11.2 1 1.3 2 2.8 3.5 2.7 1.4-.1 1.9-.9 3.7-.9 1.7 0 2.2.9 3.7.9s2.5-1.4 3.4-2.8c1.1-1.6 1.6-3.2 1.6-3.3-.1 0-3.4-1.3-3.4-4.5ZM14.2 4.9A4.7 4.7 0 0 0 15.3 1a4.8 4.8 0 0 0-3.2 1.6A4.4 4.4 0 0 0 11 6.4c1.2.1 2.4-.6 3.2-1.5Z"
+                  ></path></svg
+                ><span></span
+                ><svg viewBox="0 0 24 24" role="img">
+                  <path
+                    fill="currentColor"
+                    d="M4 3.2v17.6a1 1 0 0 0 1.5.8L20.8 13a1.1 1.1 0 0 0 0-1.9L5.5 2.4A1 1 0 0 0 4 3.2Zm3.3 3 8.7 5-3 3L7.3 6.2Zm0 11.6 5.8-8 3 3-8.8 5Z"
+                  ></path></svg
+              ></span>
+              <span>get the app</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-right"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path></svg></a
+            ><a class="button button--quiet" href="#stores"
+              >find a store
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                ></path>
+                <circle cx="12" cy="10" r="3"></circle></svg
+            ></a>
+          </div>
+          <p class="hero-note">made for breakfast, tiffins, full weeks and forgotten things.</p>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="/src/assets/home/hero-family-breakfast.webp"
+            alt="An Indian family sharing a bright everyday breakfast at home"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+          />
+          <div class="hero-visual__wash"></div>
+          <div class="hero-trust-card">
+            <span>what matters</span><b>fresh food. familiar comfort. a better everyday shop.</b>
+          </div>
+          <a class="hero-store-card" href="#reality"
+            ><span class="pulse" aria-hidden="true"></span><span><b>real stores, nearby</b>see rapsap as it is</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path></svg
+          ></a>
+        </div>
+      </section>
+      <div class="category-ribbon" aria-label="what you can shop">
+        <div class="category-ribbon__track">
+          <span>fresh &amp; veg<i>•</i></span
+          ><span>dairy &amp; breakfast<i>•</i></span
+          ><span>bakery &amp; café<i>•</i></span
+          ><span>groceries &amp; staples<i>•</i></span
+          ><span>meat &amp; seafood<i>•</i></span
+          ><span>snacks &amp; beverages<i>•</i></span
+          ><span>personal care<i>•</i></span
+          ><span>household<i>•</i></span
+          ><span>fresh &amp; veg<i>•</i></span
+          ><span>dairy &amp; breakfast<i>•</i></span
+          ><span>bakery &amp; café<i>•</i></span
+          ><span>groceries &amp; staples<i>•</i></span
+          ><span>meat &amp; seafood<i>•</i></span
+          ><span>snacks &amp; beverages<i>•</i></span
+          ><span>personal care<i>•</i></span
+          ><span>household<i>•</i></span>
+        </div>
+      </div>
+      <section id="shop" class="shop-section shop-section--early" aria-labelledby="shop-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow"><span></span> a supermarket for the full week</p>
+            <h2 id="shop-title">Everything the week needs.<br /><em>And a little more.</em></h2>
+          </div>
+          <p>
+            Start with what&#x27;s fresh. Finish with everything the home needs. Discover a few things you did not know
+            you wanted.
+          </p>
+        </div>
+        <div class="range-grid">
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-fresh-veg.webp"
+              alt="A bright still life representing fresh &amp; veg"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">01</span>
+            <div class="range-card__copy">
+              <h3>fresh &amp; veg</h3>
+              <p>colour, crunch and the start of a good meal</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-dairy-breakfast.webp"
+              alt="A bright still life representing dairy &amp; breakfast"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">02</span>
+            <div class="range-card__copy">
+              <h3>dairy &amp; breakfast</h3>
+              <p>the everyday first things</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-bakery-cafe.webp"
+              alt="A bright still life representing bakery &amp; café"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">03</span>
+            <div class="range-card__copy">
+              <h3>bakery &amp; café</h3>
+              <p>bread, quick bites and something warm</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-groceries-staples.webp"
+              alt="A bright still life representing groceries &amp; staples"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">04</span>
+            <div class="range-card__copy">
+              <h3>groceries &amp; staples</h3>
+              <p>the full week, sorted</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-meat-seafood.webp"
+              alt="A bright still life representing meat &amp; seafood"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">05</span>
+            <div class="range-card__copy">
+              <h3>meat &amp; seafood</h3>
+              <p>choices for tonight and the weekend</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-snacks-beverages.webp"
+              alt="A bright still life representing snacks &amp; beverages"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">06</span>
+            <div class="range-card__copy">
+              <h3>snacks &amp; beverages</h3>
+              <p>familiar favourites and new finds</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-personal-care.webp"
+              alt="A bright still life representing personal care"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">07</span>
+            <div class="range-card__copy">
+              <h3>personal care</h3>
+              <p>daily care, close at hand</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+          <article class="range-card">
+            <img
+              src="/src/assets/home/range-household.webp"
+              alt="A bright still life representing household"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="range-card__shade"></div>
+            <span class="range-card__number">08</span>
+            <div class="range-card__copy">
+              <h3>household</h3>
+              <p>everything that keeps home moving</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </article>
+        </div>
+      </section>
+      <section id="proof" class="proof-section" aria-labelledby="proof-title">
+        <div class="proof-head">
+          <div>
+            <p class="eyebrow"><span></span> what makes it feel different</p>
+            <h2 id="proof-title">See it. Walk in.<br /><em>Tap in.</em></h2>
+          </div>
+          <p>Fresh food in full view, a bright neighbourhood store and the same rapsap on your phone.</p>
+        </div>
+        <div class="proof-grid">
+          <figure class="proof-card">
+            <img
+              src="/src/assets/home/range-fresh-veg.webp"
+              alt="Fresh vegetables and fruit arranged for an everyday shop"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <figcaption>
+              <b>good food, in full view.</b><span>Fresh choices for today and the full week.</span>
+            </figcaption>
+          </figure>
+          <figure class="proof-card">
+            <img
+              src="/src/assets/home/store-interior.webp"
+              alt="The bright interior of an operating rapsap supermarket"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <figcaption>
+              <b>a real store, nearby.</b><span>Walk in, look around and shop at your pace.</span>
+            </figcaption>
+          </figure>
+          <figure class="proof-card proof-card--app">
+            <img
+              src="/src/assets/home/app-screens.webp"
+              alt="rapsap app product and category screens"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <figcaption>
+              <b>one rapsap, store to phone.</b><span>Continue the same shop whenever you need it.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="quality" class="quality-section" aria-labelledby="quality-title">
+        <div class="quality-copy">
+          <p class="eyebrow"><span></span> good food, made for every day</p>
+          <h2 id="quality-title">What comes home<br /><em>matters.</em></h2>
+          <p class="quality-lead">
+            From fruit for the school tiffin to milk at breakfast and staples for the week, rapsap is built around food
+            people actually live with.
+          </p>
+          <div class="quality-list">
+            <div>
+              <span>fresh &amp; familiar</span>
+              <p>The everyday things you know, plus something better to discover.</p>
+            </div>
+            <div>
+              <span>the full week</span>
+              <p>Food, groceries and home essentials brought together in one useful shop.</p>
+            </div>
+            <div>
+              <span>clear value</span>
+              <p>Premium where it counts, accessible enough to become part of daily life.</p>
+            </div>
+          </div>
+        </div>
+        <div class="quality-visual">
+          <img
+            src="/src/assets/home/quality-spread.webp"
+            alt="A bright spread of fresh produce, bread, dairy and Indian pantry staples"
+            loading="lazy"
+            decoding="async"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+          /><span class="quality-caption">food for real life.</span>
+        </div>
+      </section>
+      <section id="reality" class="reality-section" aria-labelledby="reality-title">
+        <div class="reality-head">
+          <p class="eyebrow eyebrow--light"><span></span> photographed inside rapsap</p>
+          <h2 id="reality-title">The bright store.<br />Right where you live.</h2>
+          <p>
+            Fresh food in view, open aisles, real people and a full shop you can walk into. The app adds convenience;
+            the store keeps the relationship human.
+          </p>
+        </div>
+        <div class="reality-gallery">
+          <figure class="reality-photo reality-photo--wide">
+            <img
+              src="/src/assets/home/store-interior.webp"
+              alt="A wide view inside an operating rapsap supermarket"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <figcaption><span>01</span> the full weekly shop</figcaption>
+          </figure>
+          <figure class="reality-photo">
+            <img
+              src="/src/assets/home/store-produce.webp"
+              alt="Produce displayed inside an operating rapsap supermarket"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <figcaption><span>02</span> fresh food in view</figcaption>
+          </figure>
+          <figure class="reality-photo">
+            <img
+              src="/src/assets/home/store-bakery-cafe.webp"
+              alt="Bakery and café counter inside an operating rapsap supermarket"
+              loading="lazy"
+              decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"
+            />
+            <figcaption><span>03</span> more than the basics</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="loyal" class="loyal-section" aria-labelledby="loyal-title">
+        <div class="loyal-copy">
+          <p class="eyebrow eyebrow--light"><span></span> rapsap loyal</p>
+          <h2 id="loyal-title">7% extra.<br />every bill.</h2>
+          <p class="loyal-lead">
+            Simple value that returns whenever you shop—without a points puzzle or a savings calculator.
+          </p>
+          <ul>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-check"
+                aria-hidden="true"
+              >
+                <path d="M20 6 9 17l-5-5"></path></svg
+              ><span><b>7% flat discount</b> across eligible purchases</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-check"
+                aria-hidden="true"
+              >
+                <path d="M20 6 9 17l-5-5"></path></svg
+              ><span><b>₹499</b> annual membership</span>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-check"
+                aria-hidden="true"
+              >
+                <path d="M20 6 9 17l-5-5"></path></svg
+              ><span><b>free delivery</b> subject to programme conditions</span>
+            </li>
+          </ul>
+          <p class="terms-note">
+            Current programme terms supplied by rapsap. Eligibility and delivery conditions apply.
+          </p>
+        </div>
+        <div class="loyal-card" aria-label="rapsap loyal membership summary">
+          <div class="loyal-card__top">
+            <span class="brand-lockup"
+              ><img
+                src="/src/assets/home/rapsap-wordmark.svg"
+                alt="rapsap."
+                width="197"
+                height="45"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async" /></span
+            ><span>loyal</span>
+          </div>
+          <p>one simple membership</p>
+          <strong>7%</strong>
+          <h3>extra. every bill.</h3>
+          <div class="loyal-card__bottom"><span>annual membership</span><b>₹499</b></div>
+        </div>
+      </section>
+      <section id="app" class="app-section" aria-labelledby="app-title">
+        <div class="app-copy">
+          <p class="eyebrow"><span></span> the store, carried forward</p>
+          <h2 id="app-title">your rapsap.<br /><em>now in your pocket.</em></h2>
+          <p>
+            Browse your everyday shop, order from the neighbourhood and keep your loyal value connected. The app extends
+            the store instead of replacing it.
+          </p>
+          <div class="download-row">
+            <a
+              class="store-button"
+              href="https://play.google.com/store/apps/details?id=com.rapsap.customerapp"
+              target="_blank"
+              rel="noreferrer"
+              ><small>get it on</small><strong>Google Play</strong
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right"
+                aria-hidden="true"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path></svg></a
+            ><a
+              class="store-button"
+              href="https://apps.apple.com/in/app/rapsap/id6751572222"
+              target="_blank"
+              rel="noreferrer"
+              ><small>download on the</small><strong>App Store</strong
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right"
+                aria-hidden="true"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path></svg
+            ></a>
+          </div>
+          <ol class="app-steps">
+            <li>
+              <span>01</span>
+              <div>
+                <b>browse the full shop</b>
+                <p>Fresh food, staples and home essentials.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <b>order nearby</b>
+                <p>Your neighbourhood store, on your phone.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <b>stay loyal</b>
+                <p>Carry membership value between store and app.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="app-visual">
+          <div class="app-orbit app-orbit--one"></div>
+          <div class="app-orbit app-orbit--two"></div>
+          <div class="app-phone">
+            <img
+              src="/src/assets/home/app-screens.webp"
+              alt="rapsap app showing products and categories"
+              width="970"
+              height="899"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <span class="app-sticker">same store.<br /><b>less running around.</b></span>
+        </div>
+      </section>
+      <section id="formats" class="formats-section" aria-labelledby="formats-title">
+        <div class="section-head section-head--formats">
+          <div>
+            <p class="eyebrow"><span></span> one promise, useful formats</p>
+            <h2 id="formats-title">A rapsap for every neighbourhood.</h2>
+          </div>
+          <p>
+            Different sizes and needs. The same commitment to good food, great value and a useful everyday relationship.
+          </p>
+        </div>
+        <div class="format-grid">
+          <article class="format-card">
+            <span class="format-card__number">01</span>
+            <p>the flagship format</p>
+            <div class="format-lockup format-lockup--supermarket" aria-label="rapsap supermarket">
+              <span class="format-lockup__word"
+                ><img
+                  src="/src/assets/home/rapsap-wordmark.svg"
+                  alt=""
+                  width="394"
+                  height="90"
+                  loading="lazy"
+                  decoding="async" /></span
+              ><b>supermarket</b>
+            </div>
+            <p>Fresh food, weekly groceries and everyday essentials under one neighbourhood roof.</p>
+          </article>
+          <article class="format-card">
+            <span class="format-card__number">02</span>
+            <p>closer to home</p>
+            <div class="format-lockup format-lockup--mini-market" aria-label="rapsap mini-market">
+              <span class="format-lockup__word"
+                ><img
+                  src="/src/assets/home/rapsap-wordmark.svg"
+                  alt=""
+                  width="394"
+                  height="90"
+                  loading="lazy"
+                  decoding="async" /></span
+              ><b>mini-market</b>
+            </div>
+            <p>A focused edit of essentials for smaller neighbourhood catchments.</p>
+          </article>
+          <article class="format-card">
+            <span class="format-card__number">03</span>
+            <p>specialty &amp; discovery</p>
+            <div class="format-lockup format-lockup--gourmet" aria-label="rapsap gourmet co.">
+              <span class="format-lockup__word"
+                ><img
+                  src="/src/assets/home/rapsap-wordmark.svg"
+                  alt=""
+                  width="394"
+                  height="90"
+                  loading="lazy"
+                  decoding="async" /><i class="format-lockup__dot" aria-hidden="true"></i></span
+              ><b>gourmet co.</b>
+            </div>
+            <p>Curated food and thoughtful finds for hosting, discovery and better everyday eating.</p>
+          </article>
+          <article class="format-card">
+            <span class="format-card__number">04</span>
+            <p>healthcare, integrated</p>
+            <div class="format-lockup format-lockup--medical" aria-label="rapsap plus medical">
+              <span class="format-lockup__word"
+                ><img
+                  src="/src/assets/home/rapsap-wordmark.svg"
+                  alt=""
+                  width="394"
+                  height="90"
+                  loading="lazy"
+                  decoding="async"
+                /><i class="format-lockup__plus" aria-hidden="true">+</i></span
+              ><b>medical</b>
+            </div>
+            <p>Trusted healthcare essentials and pharmacy solutions, connected to the neighbourhood shop.</p>
+          </article>
+        </div>
+      </section>
+      <section id="presence" class="presence-section" aria-labelledby="presence-title">
+        <div class="presence-head">
+          <p class="eyebrow"><span></span> developer presence</p>
+          <h2 id="presence-title">In the neighbourhoods<br /><em>people call home.</em></h2>
+          <p>Current and planned rapsap presence across communities shaped by leading real estate developers.</p>
+        </div>
+        <div class="partner-ribbon" aria-label="developer presence logos">
+          <div class="partner-ribbon__track">
+            <span class="partner-mark"
+              ><img
+                src="/src/assets/home/lodha.png"
+                alt="Lodha"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/hiranandani.png"
+                alt="Hiranandani"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/godrej-properties.png"
+                alt="Godrej Properties"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/kalpataru.png"
+                alt="Kalpataru"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/oberoi-realty.png"
+                alt="Oberoi Realty"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/lt-realty.png"
+                alt="L&amp;T Realty"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/prestige-group.png"
+                alt="Prestige Group"
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/lodha.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/hiranandani.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/godrej-properties.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/kalpataru.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/oberoi-realty.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/lt-realty.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async" /></span
+            ><span class="partner-mark"
+              ><img
+                src="/src/assets/home/prestige-group.png"
+                alt=""
+                width="280"
+                height="120"
+                loading="lazy"
+                decoding="async"
+            /></span>
+          </div>
+        </div>
+        <p class="presence-note">
+          Logos indicate current or planned project presence referenced in the supplied 2026 material; they do not imply
+          exclusivity.
+        </p>
+      </section>
+      <section id="stores" class="stores-section" aria-labelledby="stores-title">
+        <div class="store-title-row">
+          <div>
+            <p class="eyebrow"><span></span> stores you can walk into</p>
+            <h2 id="stores-title">Find your rapsap.</h2>
+          </div>
+          <p>
+            Live and upcoming locations across Thane, Kalyan and Palava. We only publish directions once customer-facing
+            details are verified.
+          </p>
+        </div>
+        <!-- @include partials/store-finder.html -->
+      </section>
+      <!-- @include partials/closing.html -->
+    </main>
+    <!-- @include partials/footer.html -->
+    <script type="module" src="/src/site.js"></script>
+    <script type="module" src="/src/store-finder.js"></script>
+  </body>
 </html>
