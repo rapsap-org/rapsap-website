@@ -822,17 +822,26 @@
 .format-lockup--medical .format-lockup__word img {
   clip-path: inset(0 6.2% 0 0);
 }
+/* The medical "+" takes the place of the wordmark's blue dot. It is drawn, not
+   typed: a "+" glyph sits wherever the font's metrics put it, which left it
+   hanging below the baseline. Everything here is a percentage of the wordmark
+   (394 x 90 in its own units), so it lands in the same spot at every size: it
+   fills the dot's footprint — same left edge and gap from the "p", right edge
+   on the wordmark's edge — with its foot on the baseline (y = 65) where the dot
+   rested. 24 units across, bars 38% of that thick. */
 .format-lockup__plus {
   z-index: 2;
   color: #08a967;
-  font-family: var(--font-body);
-  font-size: 4.35rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 0.8;
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 38% no-repeat,
+    linear-gradient(currentColor, currentColor) center / 38% 100% no-repeat;
+  aspect-ratio: 1;
+  width: 6.1%;
+  font-size: 0;
   position: absolute;
-  top: 7%;
-  right: -2%;
+  top: 59%;
+  left: 97.1%;
+  transform: translate(-50%, -50%);
 }
 .format-card > p:last-child {
   max-width: 490px;
