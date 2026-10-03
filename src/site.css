@@ -874,6 +874,7 @@ footer {
   border-top: 1px solid var(--line-light);
   color: #ffffff8a;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
   max-width: 1400px;
   margin: 0 auto;
@@ -889,12 +890,15 @@ footer {
 }
 .footer-social {
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2px;
   display: flex;
 }
 .footer-social a {
   justify-content: center;
-  width: 44px;
+  min-width: 44px;
+  padding: 0 6px;
   color: #ffffffb8;
   transition: color 0.2s;
 }
