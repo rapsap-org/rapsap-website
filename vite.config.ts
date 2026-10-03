@@ -1,5 +1,5 @@
-import { defineConfig, type Plugin } from "vite";
-import { readFileSync } from "node:fs";
+import { defineConfig, type Connect, type Plugin } from "vite";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 // Lets every page share one header / footer / CTA:  <!-- @include partials/header.html -->
@@ -15,10 +15,27 @@ const htmlInclude = (): Plugin => ({
   },
 });
 
+// Serve /about like /about/ locally, as Vercel does (Vite only looks for about.html)
+const cleanUrls = (): Plugin => {
+  const rewrite =
+    (root: string): Connect.NextHandleFunction =>
+    (req, _res, next) => {
+      const [path, query = ""] = (req.url ?? "").split("?");
+      if (path !== "/" && !path.endsWith("/") && !path.includes(".") && existsSync(resolve(root, `.${path}/index.html`)))
+        req.url = `${path}/${query && `?${query}`}`;
+      next();
+    };
+  return {
+    name: "clean-urls",
+    configureServer: (server) => void server.middlewares.use(rewrite(__dirname)),
+    configurePreviewServer: (server) => void server.middlewares.use(rewrite(resolve(__dirname, "dist"))),
+  };
+};
+
 export default defineConfig({
   base: "/",
   publicDir: "public",
-  plugins: [htmlInclude()],
+  plugins: [htmlInclude(), cleanUrls()],
   build: {
     rollupOptions: {
       input: {
@@ -31,6 +48,7 @@ export default defineConfig({
         terms: resolve(__dirname, "terms-conditions/index.html"),
         shipping: resolve(__dirname, "shipping-policy/index.html"),
         refund: resolve(__dirname, "refund-policy/index.html"),
+        aaharank: resolve(__dirname, "aaharank/index.html"),
         googleHtml: resolve(__dirname, "google7694cf04bb5ce287.html"),
       },
     },
