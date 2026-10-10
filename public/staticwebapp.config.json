@@ -1,0 +1,93 @@
+{
+  "trailingSlash": "always",
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "routes": [
+    {
+      "route": "/stores.html",
+      "redirect": "/stores/",
+      "statusCode": 301
+    },
+    {
+      "route": "/about.html",
+      "redirect": "/about/",
+      "statusCode": 301
+    },
+    {
+      "route": "/franchise.html",
+      "redirect": "/partners/",
+      "statusCode": 301
+    },
+    {
+      "route": "/privacy-policy.html",
+      "redirect": "/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "route": "/terms-conditions.html",
+      "redirect": "/terms-conditions/",
+      "statusCode": 301
+    },
+    {
+      "route": "/shipping-policy.html",
+      "redirect": "/shipping-policy/",
+      "statusCode": 301
+    },
+    {
+      "route": "/refund-policy.html",
+      "redirect": "/refund-policy/",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact-us-policy.html",
+      "redirect": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "route": "/v4*",
+      "redirect": "/",
+      "statusCode": 302
+    },
+    {
+      "route": "/doc-ver*",
+      "redirect": "/",
+      "statusCode": 302
+    },
+    {
+      "route": "/dark-ver*",
+      "redirect": "/",
+      "statusCode": 302
+    },
+    {
+      "route": "/hero-v1*",
+      "redirect": "/",
+      "statusCode": 302
+    },
+    {
+      "route": "/hero-v2*",
+      "redirect": "/",
+      "statusCode": 302
+    },
+    {
+      "route": "/hero-v3*",
+      "redirect": "/",
+      "statusCode": 302
+    },
+    {
+      "route": "/assets/*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "route": "/fonts/*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    }
+  ]
+}
