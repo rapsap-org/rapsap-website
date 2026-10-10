@@ -224,7 +224,7 @@ if (existsSync(sitemap)) {
   xml = xml.replace("</urlset>", added.map((u) => `  <url>\n    <loc>${u}</loc>\n    <lastmod>${today}</lastmod>\n  </url>\n`).join("") + "</urlset>");
   writeFileSync(sitemap, xml);
   if (added.length) report.push(`sitemap: added ${added.join(", ")}`);
-  if (gone.length) warnings.push(`sitemap: removed ${gone.join(", ")}. If those URLs were ever live, add redirects in vercel.json.`);
+  if (gone.length) warnings.push(`sitemap: removed ${gone.join(", ")}. If those URLs were ever live, add redirects in public/staticwebapp.config.json.`);
 }
 
 const kb = (n) => `${(n / 1024).toFixed(0)} KB`;
